@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { NavBar } from './components/NavBar';
+import { TodoList } from './components/TodoList';
+import 'bootswatch/dist/minty/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+class App extends Component {
+
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      todoList: []
+  }
+    this.addNewAction = this.addNewAction.bind(this)
+}
+
+  addNewAction(value) {
+    console.log(`Action ajoutée ${value} !`);
+    // let newList = [];
+    // newList.push(value)
+    // console.log(newList)
+    // this.setState({todoList: newList})
+    this.setState(previousState => ({
+      todoList: [...previousState.todoList, value]
+  }));
+  }
+  render() {
+    console.log(this.state.todoList)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div  className='TodoList--container'>
+      <NavBar addNewAction={this.addNewAction} />
+      <TodoList todoList={this.state.todoList} />
+      </div>
     </div>
   );
+  }
 }
 
 export default App;

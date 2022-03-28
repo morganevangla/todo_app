@@ -1,0 +1,14 @@
+.TodoList--list {
+    list-style: none;
+}
+
+.TodoList--container {
+    background-image: url('../../public/images/todoFond.jpg');
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-size: cover;
+}
+
+    
+    
