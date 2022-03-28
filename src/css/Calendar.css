@@ -9,3 +9,20 @@
     z-index: 1;
     text-align: center;
 }
+
+.selected {
+    background-color: #78c2ad;
+}
+
+.today {
+    background-color: #959e9c;
+    color: white;
+}
+
+.before {
+    color: #bcc2c0;
+}
+
+.day {
+    cursor: pointer;
+}

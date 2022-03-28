@@ -18,17 +18,11 @@ class App extends Component {
 }
 
   addNewAction(value) {
-    console.log(`Action ajoutée ${value} !`);
-    // let newList = [];
-    // newList.push(value)
-    // console.log(newList)
-    // this.setState({todoList: newList})
     this.setState(previousState => ({
       todoList: [...previousState.todoList, value]
   }));
   }
   render() {
-    console.log(this.state.todoList)
   return (
     <div className="App">
       <div  className='TodoList--container'>
