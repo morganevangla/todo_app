@@ -10,5 +10,20 @@
     background-size: cover;
 }
 
-    
+.arrow-icons {
+    cursor: pointer;
+    width: 20%;
+}
+
+#card--container {
+    display: flex;                  /* establish flex card--container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+  }
+  #card--container > div {
+    width: 100px;
+    height: 100px;
+    padding: 35px 0;
+  }    
     

@@ -3,7 +3,6 @@ import './App.css';
 import { NavBar } from './components/NavBar';
 import { TodoList } from './components/TodoList';
 import 'bootswatch/dist/minty/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
