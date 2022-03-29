@@ -1,5 +1,7 @@
 .TodoList--list {
     list-style: none;
+    padding-left: 0rem;
+    margin-top: 4%;
 }
 
 .TodoList--container {
@@ -25,5 +27,8 @@
     width: 100px;
     height: 100px;
     padding: 35px 0;
-  }    
-    
+  }
+  
+  .card-body {
+    overflow: auto;
+  }

@@ -16,9 +16,9 @@ class App extends Component {
     this.addNewAction = this.addNewAction.bind(this)
 }
 
-  addNewAction(value) {
+  addNewAction(value, date) {
     this.setState(previousState => ({
-      todoList: [...previousState.todoList, value]
+      todoList: [...previousState.todoList, {['task']: value, ['date']: date}]
   }));
   }
   render() {
